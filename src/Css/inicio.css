@@ -1,0 +1,11 @@
+.container_portada{
+    background-color: black;
+}
+.div_container_textoInicio{
+      
+    opacity: 0;
+    margin-left: 300px;
+}
+.sexo{
+    display: none;
+}
