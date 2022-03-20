@@ -1,9 +1,9 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-function navLink({nombre, href, className}){
+function navLink({nombre, href, className, onClick}){
     return(
-        <AnchorLink href={href} className={className}>
+        <AnchorLink href={href} onClick={onClick} className={className}>
             {nombre}
         </AnchorLink> 
     )

@@ -6,15 +6,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  margin: 0;
-  padding: 0;
-}
-html{
+
+html, body {
   -webkit-text-size-adjust: 100%;
 }
-
-body{
-  overflow-x: hidden;
+body {
+  overflow-x: hidden ;
 }
 
+.eliminarOutline { 
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+@media (max-width: 768px) {
+  .hideOverflowOnMobile {
+  overflow: hidden;
+  }
+  }

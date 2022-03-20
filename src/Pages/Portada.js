@@ -5,7 +5,7 @@ export default function Portada(){
 
 const textLines = [
   'Hola',
-  'Bienvenido a mi portafolio'
+  'Bienvenido a mi Portafolio'
 
 ];
     return(
@@ -14,7 +14,7 @@ const textLines = [
             id="id_contenedor_portada"
           
           >
-                <div className=" flex content-center justify-center h-32  text-center text-white text-3xl md:text-7xl"> 
+                <div className=" flex w-full content-center justify-center px-6 text-center text-white text-3xl md:text-7xl"> 
                     <Typed strings={textLines} typeSpeed={48} backSpeed={10}/>
                 </div> 
           </div>

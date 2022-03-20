@@ -1,13 +1,17 @@
-
 import { motion } from 'framer-motion';
 import React,{useState} from 'react'
-
+import { useMediaQuery } from 'react-responsive'
 
 import Link from './navLink'
 
 function Nav() {
  
   const [openMenu, setOpenMenu] = useState(false);
+
+  const isMovil = useMediaQuery({
+    maxWidth: "640px"
+  })
+
 
     //*ABRIR NAV MOVIL
     const handleOpenMenu = () => {
@@ -20,19 +24,31 @@ function Nav() {
         }
     }
 
+    const cerrarMenuClick = () =>{
+        if(isMovil){
+            if(openMenu === false){
+                setOpenMenu(true);
+    
+            }else{
+                setOpenMenu(false);
+            }
+
+        }
+
+    }
 
 
   return (
-      <motion.div class="w-full fixed bg-black z-10"
-                  style={{opacity: '0'}}
+      <motion.div className="w-screen fixed bg-black z-10"
+                  style={{opacity: 0}}
                   animate={{opacity: 1}}
                   transition={{type: 'tween',
-                              duration: 4,
+                              duration: 3,
                               ease: 'anticipate'}}
       >
-        <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-6 lg:px-8">
-                <div className="p-4 md:py-8 flex flex-row items-center justify-end">
-                    <button className="md:hidden rounded-full p-1 hover:bg-gray-800 focus:outline-none focus:shadow-outline" onClick={handleOpenMenu}>
+        <div className="flex w-full justify-center flex-col px-4 py-3 md:flex-row md:px-6 lg:px-8">
+                <div className="flex pr-4 justify-end md:hidden">
+                    <button className="md:hidden rounded-full p-1 hover:bg-gray-800 eliminarOutline" onClick={handleOpenMenu}>
                         <svg viewBox="0 0 20 20" className="w-6 h-6">
                         {
                             openMenu === true ? (
@@ -45,10 +61,10 @@ function Nav() {
 
                     <nav id='nav' className={openMenu === false ? ("flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-center md:flex-row"):("flex-col flex-grow pb-4 md:pb-0 flex md:justify-center md:flex-row")}>
                     
-                        <Link className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#home" nombre="Inicio"/>
-                        <Link className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#sobreMi" nombre="QuienSoy"/>
-                        <Link className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#miConocimiento" nombre="Conocimiento"/>
-                        <Link className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#proyectos" nombre="Proyectos"/>
+                        <Link onClick={cerrarMenuClick} className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#home" nombre="Inicio"/>
+                        <Link onClick={cerrarMenuClick} className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#sobreMi" nombre="QuienSoy"/>
+                        <Link onClick={cerrarMenuClick} className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#miConocimiento" nombre="Conocimiento"/>
+                        <Link onClick={cerrarMenuClick} className="px-4 py-2 text-white mt-2 text-md font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#proyectos" nombre="Proyectos"/>
 
                     </nav>
         </div>

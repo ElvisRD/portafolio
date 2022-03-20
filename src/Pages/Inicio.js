@@ -29,8 +29,12 @@ function Inicio() {
     useEffect(() => {
      
       setTimeout(() => {
+        setIsVisible(false)
+      },2500)
+
+      setTimeout(() => {
         transicionPortada();
-      }, 4400);
+      }, 5000);
        
       Aos.init({duration: 1500});
 
@@ -39,11 +43,9 @@ function Inicio() {
 
     function transicionPortada(){
 
-        setIsVisible(false);  
-
           document.getElementById('portada_container').style.display="none";
-          document.getElementById('sexo').style.display="block";
-          
+          document.getElementById('inicio').style.display="block";
+        
           setvisibleTituloInicio(true);   //MOSTRAR TITULO INICIO
           
           setTimeout(() => {
@@ -56,28 +58,26 @@ function Inicio() {
   
           setTimeout(() => {
             setMostrarDiv(true);
-          }, 3500);
+          }, 3000);
   
     }
 
     return (
      
-      <div class=" w-full sm:h-screen md:h-screen sm:h-screen">
-      
+      <div className=" w-full h-screen">
 
          {visibleIcons ? (<Nav />):("")}
-         
-
-          <seccion  
-            class="flex w-full h-screen justify-center items-center bg-no-repeat bg-cover bg-center bg-fixed " id="home"
+        
+          <div  
+            className="flex w-full h-screen justify-center items-center bg-no-repeat bg-cover bg-center bg-fixed " id="home"
             style={{backgroundImage: "url('https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"}}
           >
 
-                  <motion.div className="w-full h-screen" id="portada_container"
-                              initial={{backgroundColor: 'black'}}
+                  <motion.div className="w-full h-screen bg-black" id="portada_container"
+                              initial={{opacity: 1}}
                               animate={isVisible ? {} : {opacity: 0}}
                               transition={isVisible ? {} : {type: 'tween',
-                                                            duration: 4,
+                                                            duration: 3,
                                                             }}
                           
                   >
@@ -86,18 +86,18 @@ function Inicio() {
 
                   </motion.div> 
 
-                 <div className="flex w-screen sm:h-26 md:h-30 lg:h-34 flex-col justify-center hidden " id="sexo" >
+                 <div className="flex w-screen sm:h-26 md:h-30 lg:h-34 flex-col justify-center hidden " id="inicio" >
 
                     <div className="flex w-full sm:h-24 md:h-28 lg:h-32 flex-col " id="div_container_textoInicio">
 
-                            <motion.h1 class=" w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center font-Title"
+                            <motion.h1 className=" w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center font-Title"
                             initial={{ opacity: '0', marginLeft: '-300px'}}
                             animate={visibleTituloInicio ? {x: 300, opacity: 1}: {}}
                             transition={visibleTituloInicio ? {duration: .5}: { }}
                   
                             > Elvis Rodríguez Durán </motion.h1>  
 
-                            <motion.h2 class=" w-full text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white mt-2 text-center font-Title"
+                            <motion.h2 className=" w-full text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white mt-2 text-center font-Title"
                             initial={{ opacity: '0', marginLeft: '-300px'}}
                             animate={visibleSubTitulo ? {x: 300, opacity: 1}: {}}
                             transition={visibleSubTitulo ? {duration: 1}: { }}
@@ -112,22 +112,22 @@ function Inicio() {
                                 transition={visibleIcons ? {duration: 1}: { }}                 
                     >
                       
-                      <Icon href="https://www.instagram.com/_elvisrd_/" icon={faInstagram} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 " />
-                      <Icon href="https://github.com/ElvisRD" icon={faGithub} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 "/>
-                      <Icon href="https://www.facebook.com/2soul2" icon={faFacebook} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 "/>
-                      <a className="w-6 sd:w-10 md:w-10 lg:w-10"  href="https://www.linkedin.com/in/elvis-rodr%C3%ADguez-dur%C3%A1n-58b338224/" target="_blank" rel="noreferrer" ><FontAwesomeIcon class="block w-full h-full lg:inline-block text-white hover:text-white cursor-pointer" icon={faLinkedin} /></a> 
+                      <Icon href="https://www.instagram.com/_elvisrd_/" icon={faInstagram} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline" />
+                      <Icon href="https://github.com/ElvisRD" icon={faGithub} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline"/>
+                      <Icon href="https://www.facebook.com/2soul2" icon={faFacebook} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline"/>
+                      <a className="w-6 sd:w-10 md:w-10 lg:w-10 eliminarOutline"  href="https://www.linkedin.com/in/elvis-rodr%C3%ADguez-dur%C3%A1n-58b338224/" target="_blank" rel="noreferrer" ><FontAwesomeIcon className="block w-full h-full lg:inline-block text-white hover:text-white cursor-pointer" icon={faLinkedin} /></a> 
                             
                           
                     </motion.div> 
 
                 </div> 
               
-          </seccion>
+          </div>
  
        {mostrarDiv ? (
          <>
-              <section className="flex w-full bg-black  py-12 md:py-48" id="sobreMi">
-                  <div class="flex w-full flex-col pb-6 md:pd-0 lg:flex-row ">
+              <div className="flex w-full bg-black  py-12 md:py-48 hideOverflowOnMobile" id="sobreMi">
+                  <div className="flex w-full flex-col pb-6 md:pd-0 lg:flex-row ">
                     <div className="flex w-full py-12 mt-0 justify-center items-center">
                               <div data-aos="fade-right" className='flex flex-col w-full'>
                                 <div className="flex w-full items-center">
@@ -140,7 +140,7 @@ function Inicio() {
                                       </p> 
                                   </div>
                                   <div className='flex w-full mt-8 justify-center'>
-                                    <a href={cv} download className="bg-blue-500 hover:bg-blue-700 py-3 text-white font-bold py-2 px-4 rounded z-10">
+                                    <a href={cv} download className="bg-blue-500 hover:bg-blue-700 py-3 text-white font-bold py-2 px-4 rounded eliminarOutline">
                                         Descargar CV
                                     </a>
 
@@ -157,15 +157,15 @@ function Inicio() {
 
                   </div>
                   
-              </section>
+              </div>
 
-              <section className="flex flex-row " id="miConocimiento">
+              <div className="flex flex-row hideOverflowOnMobile" id="miConocimiento">
 
                 <div data-aos="fade-right" className="lg:w-4/12 hidden lg:flex py-6 mt-12 justify-center items-center"> 
                   <img className="md:w-10/12 h-full rounded-3xl" alt="programer" src={"https://images.unsplash.com/photo-1599837487527-e009248aa71b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}/>
                 </div> 
 
-                <div className="w-full lg:w-8/12 h-full">
+                <div className="w-full lg:w-8/12 mb-16 md:mb-0 h-full">
         
                     <div data-aos="fade-down" className="flex w-full h-24 mt-16 md:h-40 items-center" >
                         <h1 className="w-full text-4xl lg:text-6xl text-black text-center font-Title">Tecnologías</h1>
@@ -180,17 +180,17 @@ function Inicio() {
                                           <hr/>
                                           <div className="flex flex-col items-center w-full pb-8 mb-6 md:pb-0">
 
-                                              <IconTec class="devicon-html5-plain colored" pClass="flex md:ml-5 items-center" text="HTML5"/>
+                                              <IconTec className="devicon-html5-plain colored" pClass="flex md:ml-5 items-center font-Text" text="HTML5"/>
 
-                                              <IconTec class="devicon-css3-plain colored" pClass="flex mr-5 md:mr-3 items-center" text="CSS"/>
+                                              <IconTec className="devicon-css3-plain colored" pClass="flex mr-5 md:mr-3 items-center font-Text" text="CSS"/>
 
-                                              <IconTec class="devicon-javascript-plain colored" pClass="flex ml-3 items-center" text="JavaScript"/>
+                                              <IconTec className="devicon-javascript-plain colored" pClass="flex ml-3 items-center font-Text" text="JavaScript"/>
 
-                                              <IconTec class="devicon-bootstrap-plain colored" pClass="flex ml-3 items-center" text="Bootstrap"/>
+                                              <IconTec className="devicon-bootstrap-plain colored" pClass="flex ml-3 items-center font-Text" text="Bootstrap"/>
 
-                                              <IconTec class="devicon-materialui-plain colored" pClass="flex ml-3 items-center" text="MaterialUi"/>
+                                              <IconTec className="devicon-materialui-plain colored" pClass="flex ml-3 items-center font-Text" text="MaterialUi"/>
                                               
-                                              <IconTec class="devicon-react-original colored" pClass="flex mr-3 items-center" text="React"/>
+                                              <IconTec className="devicon-react-original colored" pClass="flex mr-3 items-center font-Text" text="React"/>
       
                                           </div>
                                         </div>
@@ -201,13 +201,13 @@ function Inicio() {
                                           <hr/>
                                           <div className="flex flex-col items-center w-full pb-8 md:pb-0">
 
-                                              <IconTec class="devicon-git-plain colored" pClass="flex mr-5 items-center" text="Git"/>
+                                              <IconTec className="devicon-git-plain colored" pClass="flex mr-5 items-center font-Text" text="Git"/>
 
-                                              <IconTec class="devicon-vscode-plain colored" pClass="flex ml-3 items-center" text="VSCode"/>
+                                              <IconTec className="devicon-vscode-plain colored" pClass="flex ml-3 items-center font-Text" text="VSCode"/>
 
-                                              <IconTec class="devicon-linux-plain colored" pClass="flex mr-2 items-center" text="Linux"/>
+                                              <IconTec className="devicon-linux-plain colored" pClass="flex mr-2 items-center font-Text" text="Linux"/>
                                           
-                                              <IconTec class="devicon-github-original colored" pClass="flex ml-3 items-center" text="Github"/>
+                                              <IconTec className="devicon-github-original colored" pClass="flex ml-3 items-center font-Text" text="Github"/>
                                     
                                           </div>
                                         </div>
@@ -218,20 +218,20 @@ function Inicio() {
                                           <hr/>
                                           <div className="flex flex-col items-center w-full pb-8 md:pb-0">
                                             
-                                              <IconTec class="devicon-postgresql-plain colored" pClass="flex ml-4 md:ml-1 items-center" text="PostgreSQL"/>
+                                              <IconTec className="devicon-postgresql-plain colored" pClass="flex ml-4 md:ml-1 items-center font-Text" text="PostgreSQL"/>
 
-                                              <IconTec class="devicon-mysql-plain colored" pClass="flex mr-4 items-center" text="MySQL"/>
+                                              <IconTec className="devicon-mysql-plain colored" pClass="flex mr-4 items-center font-Text" text="MySQL"/>
 
-                                              <IconTec class="devicon-mongodb-plain colored" pClass="flex ml-3 items-center" text="MongoDb"/>
+                                              <IconTec className="devicon-mongodb-plain colored" pClass="flex ml-3 items-center font-Text" text="MongoDb"/>
                                               
                                           </div>
                                         </div>
                         </div>
                     </div>
                 </div>         
-              </section>
+              </div>
 
-              <section className="w-full py-32" id="proyectos"> 
+              <div className="w-full py-8 md:py-28 hideOverflowOnMobile" id="proyectos"> 
                   <div className='flex w-full h-full flex-col'>
                       <div data-aos="fade-left" className="flex w-full h-40 mt-4 items-center" >
                           <h1 className="w-full text-4xl lg:text-6xl text-black text-center font-Title">Proyectos</h1>
@@ -277,7 +277,7 @@ function Inicio() {
                       </div>
               
               
-              </section>
+              </div>
               </>
           ):("")} 
          
