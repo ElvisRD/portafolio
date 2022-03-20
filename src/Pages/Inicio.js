@@ -30,11 +30,11 @@ function Inicio() {
      
       setTimeout(() => {
         setIsVisible(false)
-      },2500)
+      },2200)
 
       setTimeout(() => {
         transicionPortada();
-      }, 5000);
+      }, 5100);
        
       Aos.init({duration: 1500});
 
@@ -106,16 +106,16 @@ function Inicio() {
                           
                     </div>
 
-                     <motion.div className="flex w-full h-10 mt-0 justify-center "
+                     <motion.div className="flex w-full h-10 mt-6 sm:mt-0 justify-center "
                                 initial={{opacity: '0', marginLeft: '-300px'}}
                                 animate={visibleIcons ? {x:300, opacity: 1}: {}}
                                 transition={visibleIcons ? {duration: 1}: { }}                 
                     >
                       
-                      <Icon href="https://www.instagram.com/_elvisrd_/" icon={faInstagram} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline" />
-                      <Icon href="https://github.com/ElvisRD" icon={faGithub} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline"/>
-                      <Icon href="https://www.facebook.com/2soul2" icon={faFacebook} classA="w-6 sd:w-10 md:w-10 lg:w-10 mr-8 eliminarOutline"/>
-                      <a className="w-6 sd:w-10 md:w-10 lg:w-10 eliminarOutline"  href="https://www.linkedin.com/in/elvis-rodr%C3%ADguez-dur%C3%A1n-58b338224/" target="_blank" rel="noreferrer" ><FontAwesomeIcon className="block w-full h-full lg:inline-block text-white hover:text-white cursor-pointer" icon={faLinkedin} /></a> 
+                      <Icon href="https://www.instagram.com/_elvisrd_/" icon={faInstagram} classA="flex justify-center items-center w-10 mx-3 text-white text-3xl md:text-4xl eliminarOutline" />
+                      <Icon href="https://github.com/ElvisRD" icon={faGithub} classA="flex justify-center items-center w-10 mx-3 text-white text-3xl md:text-4xl eliminarOutline"/>
+                      <Icon href="https://www.facebook.com/2soul2" icon={faFacebook} classA="flex justify-center items-center w-10 mx-3 text-white text-3xl md:text-4xl eliminarOutline"/>
+                      <a className="flex justify-center items-center w-10 mx-3 text-white  text-3xl md:text-4xl eliminarOutline"  href="https://www.linkedin.com/in/elvis-rodr%C3%ADguez-dur%C3%A1n-58b338224/" target="_blank" rel="noreferrer" ><FontAwesomeIcon icon={faLinkedin} /></a> 
                             
                           
                     </motion.div> 
@@ -126,7 +126,7 @@ function Inicio() {
  
        {mostrarDiv ? (
          <>
-              <div className="flex w-full bg-black  py-12 md:py-48 hideOverflowOnMobile" id="sobreMi">
+              <div className="flex w-full bg-black  py-12 md:py-32 hideOverflowOnMobile" id="sobreMi">
                   <div className="flex w-full flex-col pb-6 md:pd-0 lg:flex-row ">
                     <div className="flex w-full py-12 mt-0 justify-center items-center">
                               <div data-aos="fade-right" className='flex flex-col w-full'>
@@ -237,7 +237,7 @@ function Inicio() {
                           <h1 className="w-full text-4xl lg:text-6xl text-black text-center font-Title">Proyectos</h1>
                       </div>
                      
-                      <div className='grid w-full gap-4 grid-cols-1 mt-6 sm:grid-cols-2 lg:grid-cols-3 '>
+                      <div className='grid w-full gap-y-8 gap-x-4  grid-cols-1 mt-6 sm:grid-cols-2 lg:grid-cols-3 '>
                           
                           <div data-aos="fade-right"className='flex w-full h-54 justify-center'>
                             <CardProyecto 
@@ -250,13 +250,13 @@ function Inicio() {
                             />
                           </div>
 
-                          <div data-aos="fade-up" className='flex w-ful h-54 justify-center'>
+                          <div data-aos="fade-up" className='flex w-full h-54 justify-center'>
                             <CardProyecto 
                               nombre="NassApp"
                               imagen={NassApp}
                               linkGit="https://github.com/ElvisRD/react_NassApp"
                               linkWeb="https://elvisrd-nassapp.mdbgo.io/"
-                              descripcion="Es una aplicacion que muestra información interesante obtenida por distintas APIs de la NASA." 
+                              descripcion="Aplicacion que muestra información interesante obtenida por distintas APIs de la NASA." 
                               classDiv = "flex w-11/12 h-36 flex-col shadow-2xl rounded-md"
                             />
                           </div>
@@ -271,6 +271,17 @@ function Inicio() {
                               classDiv = "flex w-11/12 h-36 flex-col shadow-2xl rounded-md"
                             />
                           </div>
+
+                          {/* <div data-aos="fade-left" className='flex w-full h-54 justify-center md:col-start-2 col-end-3 bg-red-700'>
+                            <CardProyecto 
+                              nombre="Calculador de promedios"
+                              linkGit="https://github.com/ElvisRD/react-calculadorPromedio"
+                              linkWeb="https://react-calculador-promedio.vercel.app/"
+                              imagen={calcular}
+                              descripcion="Aplicación que permite calcular promedios según el porcentaje de las notas."
+                              classDiv = "flex w-11/12 h-36 flex-col shadow-2xl rounded-md"
+                            />
+                          </div> */}
 
                         </div>
                             

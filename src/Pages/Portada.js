@@ -4,8 +4,8 @@ import Typed from 'react-typed';
 export default function Portada(){
 
 const textLines = [
-  'Hola',
-  'Bienvenido a mi Portafolio'
+  'Welcome',
+  ''
 
 ];
     return(
@@ -15,7 +15,7 @@ const textLines = [
           
           >
                 <div className=" flex w-full content-center justify-center px-6 text-center text-white text-3xl md:text-7xl"> 
-                    <Typed strings={textLines} typeSpeed={48} backSpeed={10}/>
+                    <Typed strings={textLines} typeSpeed={90} backSpeed={100}/>
                 </div> 
           </div>
     )

@@ -19,8 +19,8 @@ export default function cardProyecto(props){
                 </div>
 
                 <div className='flex w-full mt-2 justify-evenly eliminarOutline'>
-                    <a href={props.linkWeb} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-Text"> Ver Página </a>
-                    <a href={props.linkGit} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-Text">  Ver Código </a>
+                    <a href={props.linkWeb} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded font-Text text-center"> Ver Página </a>
+                    <a href={props.linkGit} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded font-Text text-center ">  Ver Código </a>
                 </div>
             </div>
         </div>
