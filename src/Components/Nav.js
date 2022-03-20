@@ -39,7 +39,7 @@ function Nav() {
 
 
   return (
-      <motion.div className="w-screen fixed bg-black z-10"
+      <motion.div className="w-full fixed bg-black z-10"
                   style={{opacity: 0}}
                   animate={{opacity: 1}}
                   transition={{type: 'tween',

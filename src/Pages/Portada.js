@@ -10,7 +10,7 @@ const textLines = [
 ];
     return(
           <div  
-            className="flex w-full h-full bg-no-repeat bg-cover bg-center bg-fixed justify-center items-center contenedorPortada"
+            className="flex w-full h-full bg-no-repeat bg-cover bg-center bg-fixed justify-center items-center contenedorPortada "
             id="id_contenedor_portada"
           
           >
