@@ -244,7 +244,7 @@ function Inicio() {
                               nombre="Portafolio"
                               imagen={portafolio}
                               linkGit="https://github.com/ElvisRD/portafolio"
-                              linkWeb="/"
+                              linkWeb="https://elvisrd-portafolio.mdbgo.io/"
                               descripcion="Es el portafolio en el que estás, aquí encontraras información sobre mi conocimiento y mis proyectos."
                               classDiv = "flex w-11/12 md:w-11/12 h-58 flex-col shadow-2xl rounded-md"
                             />
