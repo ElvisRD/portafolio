@@ -2,12 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
-function icon({href, icon}){
+function icon({href, icon, classA}){
     return(
         
-        
-        <FontAwesomeIcon href={href} class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white cursor-pointer mr-10" icon={icon} /> 
-
+        <a href={href} className={classA} target="_blank" rel="noreferrer"><FontAwesomeIcon  class="block  w-full h-full lg:inline-block lg:mt-0 text-white hover:text-white cursor-pointer" icon={icon} /> </a>
     )
 }
 

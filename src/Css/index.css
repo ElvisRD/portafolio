@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lora:ital,wght@0,500;1,500&family=Montserrat&family=Open+Sans:wght@500&family=Oswald&family=Playfair+Display:wght@500&family=Roboto+Condensed&family=Sansita+Swashed:wght@300;500;600&family=Secular+One&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lora:ital,wght@0,500;1,500&family=Montserrat&family=Nunito:wght@300&family=Open+Sans:wght@500&family=Oswald&family=Playfair+Display:wght@500&family=Roboto+Condensed&family=Sansita+Swashed:wght@300;500;600&family=Secular+One&family=Source+Sans+Pro&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +10,11 @@
   margin: 0;
   padding: 0;
 }
+html{
+  -webkit-text-size-adjust: 100%;
+}
 
-@font-face {
-  font-family: 'Inconsolata', monospace;
-  src: url("../Fonts/Inconsolata.ttf");
+body{
+  overflow-x: hidden;
 }
 

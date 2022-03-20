@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portafolio/static/css/main.58250aaf.chunk.css",
+    "main.js": "/portafolio/static/js/main.01b18d9a.chunk.js",
+    "main.js.map": "/portafolio/static/js/main.01b18d9a.chunk.js.map",
+    "runtime-main.js": "/portafolio/static/js/runtime-main.d97de6e3.js",
+    "runtime-main.js.map": "/portafolio/static/js/runtime-main.d97de6e3.js.map",
+    "static/js/2.002ec261.chunk.js": "/portafolio/static/js/2.002ec261.chunk.js",
+    "static/js/2.002ec261.chunk.js.map": "/portafolio/static/js/2.002ec261.chunk.js.map",
+    "index.html": "/portafolio/index.html",
+    "static/css/main.58250aaf.chunk.css.map": "/portafolio/static/css/main.58250aaf.chunk.css.map",
+    "static/js/2.002ec261.chunk.js.LICENSE.txt": "/portafolio/static/js/2.002ec261.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/portafolio/static/media/Inconsolata.d436e6cb.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d97de6e3.js",
+    "static/js/2.002ec261.chunk.js",
+    "static/css/main.58250aaf.chunk.css",
+    "static/js/main.01b18d9a.chunk.js"
+  ]
+}
