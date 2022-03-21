@@ -256,7 +256,7 @@ function Inicio() {
                               imagen={NassApp}
                               linkGit="https://github.com/ElvisRD/react_NassApp"
                               linkWeb="https://elvisrd-nassapp.mdbgo.io/"
-                              descripcion="Aplicacion que muestra información interesante obtenida por distintas APIs de la NASA." 
+                              descripcion="Aplicación que muestra información interesante obtenida por distintas APIs de la NASA." 
                               classDiv = "flex w-11/12 h-36 flex-col shadow-2xl rounded-md"
                             />
                           </div>
@@ -265,7 +265,7 @@ function Inicio() {
                             <CardProyecto 
                               nombre="Calculador de promedios"
                               linkGit="https://github.com/ElvisRD/react-calculadorPromedio"
-                              linkWeb="https://react-calculador-promedio.vercel.app/"
+                              linkWeb="https://calculador-promedio.vercel.app/"
                               imagen={calcular}
                               descripcion="Aplicación que permite calcular promedios según el porcentaje de las notas."
                               classDiv = "flex w-11/12 h-36 flex-col shadow-2xl rounded-md"
